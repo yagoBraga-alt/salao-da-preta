@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Reconhecimento from './components/Reconhecimento'
@@ -9,9 +9,18 @@ import Portfolio from './components/Portfolio'
 import Redes from './components/Redes'
 import Agendamento from './components/Agendamento'
 import Footer from './components/Footer'
+import NotFound from './components/NotFound'
 
 export default function App() {
+  const [isNotFound, setIsNotFound] = useState(false);
+
   useEffect(() => {
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '') {
+      setIsNotFound(true);
+      return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -27,6 +36,10 @@ export default function App() {
       observer.disconnect();
     };
   }, []);
+
+  if (isNotFound) {
+    return <NotFound />;
+  }
 
   return (
     <>
