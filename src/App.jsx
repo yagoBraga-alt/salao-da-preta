@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Reconhecimento from './components/Reconhecimento'
@@ -12,14 +12,11 @@ import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 
 export default function App() {
-  const [isNotFound, setIsNotFound] = useState(false);
+  // Altere para true para exibir o site novamente
+  const showSite = false;
 
   useEffect(() => {
-    const path = window.location.pathname;
-    if (path !== '/' && path !== '') {
-      setIsNotFound(true);
-      return;
-    }
+    if (!showSite) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -35,9 +32,9 @@ export default function App() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [showSite]);
 
-  if (isNotFound) {
+  if (!showSite) {
     return <NotFound />;
   }
 
