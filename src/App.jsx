@@ -12,8 +12,8 @@ import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 
 export default function App() {
-  // Altere para false para ocultar o site e exibir apenas a tela 404
-  const showSite = true;
+  // Altere para true para exibir o site novamente
+  const showSite = false;
 
   useEffect(() => {
     if (!showSite) return;
