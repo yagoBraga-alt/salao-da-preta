@@ -13,7 +13,7 @@ import NotFound from './components/NotFound'
 
 export default function App() {
   // Altere para true para exibir o site novamente
-  const showSite = false;
+  const showSite = true;
 
   useEffect(() => {
     if (!showSite) return;
