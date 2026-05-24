@@ -1,8 +1,3 @@
-import review1 from '../assets/review1.png'
-import review2 from '../assets/review2.png'
-import review3 from '../assets/review3.png'
-import review4 from '../assets/review4.png'
-
 export default function Depoimentos() {
   return (
     <section className="depoimentos">
@@ -12,17 +7,25 @@ export default function Depoimentos() {
         <h2 className="section-title text-center">Quem já <em>viveu</em><br />a experiência</h2>
 
         <div className="depo-grid">
-          <div className="depo-card depo-card--img">
-            <img src={review1} alt="Avaliação de João Pedro dos Santos" loading="lazy" />
+          <div className="depo-card">
+            <div className="depo-stars">★★★★★</div>
+            <blockquote>"Atendimento excelente, muito bom. Recepção por WhatsApp muito boa. A Jô, uma pessoa super gente boa, conversa, tira qualquer dúvida, e faz o cabelo ficar do jeito que a pessoa quer. Simplesmente o melhor salão de cabelo cacheado de Parnaíba!!!!!"</blockquote>
+            <p className="depo-author">João Pedro dos Santos</p>
           </div>
-          <div className="depo-card depo-card--img" style={{ alignItems: 'flex-start' }}>
-            <img src={review2} alt="Avaliação de Maria Eduarda" loading="lazy" style={{ marginTop: '-32px' }} />
+          <div className="depo-card">
+            <div className="depo-stars">★★★★★</div>
+            <blockquote>"Foi tudo perfeito, acolhedor e muito atencioso. Me tirou muitas dúvidas que eu tinha sobre meu tipo de cabelo e como finalizar ele, redescobri meu cabelinhooo ♡"</blockquote>
+            <p className="depo-author">Maria Eduarda</p>
           </div>
-          <div className="depo-card depo-card--img">
-            <img src={review3} alt="Avaliação de Lays" loading="lazy" />
+          <div className="depo-card">
+            <div className="depo-stars">★★★★★</div>
+            <blockquote>"Minha experiência foi simplesmente incrível, há um ótimo atendimento, são muito simpáticas e entrega o que promete."</blockquote>
+            <p className="depo-author">Lays</p>
           </div>
-          <div className="depo-card depo-card--img">
-            <img src={review4} alt="Avaliação de cliente" loading="lazy" />
+          <div className="depo-card">
+            <div className="depo-stars">★★★★★</div>
+            <blockquote>"Ter passado pelas mãos da Jô foi uma experiência maravilhosa. O cuidado, a atenção e o carinho em cada detalhe fazem toda a diferença. Me senti segura, acolhida e o resultado no meu cabelo ficou simplesmente lindo!"</blockquote>
+            <p className="depo-author">Ana Raquel</p>
           </div>
         </div>
 

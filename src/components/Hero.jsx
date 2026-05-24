@@ -25,7 +25,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-ctas">
-          <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="btn-primary">Agendar horário →</a>
+          <a href="https://wa.me/558698352282?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" target="_blank" rel="noopener noreferrer" className="btn-primary">Agendar horário →</a>
           <a href="#redes" className="btn-outline">Ver redes sociais</a>
         </div>
       </div>

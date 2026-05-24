@@ -29,7 +29,7 @@ export default function Curso() {
           </div>
         </div>
 
-        <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="btn-primary">
+        <a href="https://wa.me/558698352282?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20o%20curso%20Da%20Preta%20Ra%C3%ADzes!" target="_blank" rel="noopener noreferrer" className="btn-primary">
           Quero saber mais sobre o curso →
         </a>
       </div>
