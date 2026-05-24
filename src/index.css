@@ -377,7 +377,9 @@ section { padding: 5rem 1.5rem; }
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .servico-card:hover {
@@ -404,6 +406,22 @@ section { padding: 5rem 1.5rem; }
   font-size: 0.8rem;
   color: #8a6040;
   line-height: 1.5;
+  flex: 1;
+}
+
+.servico-wa {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--terracota);
+  margin-top: 0.85rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.servico-wa:hover {
+  color: var(--espresso);
 }
 
 /* ─── CURSO ─── */
@@ -606,6 +624,15 @@ section { padding: 5rem 1.5rem; }
   color: #8a6040;
   text-align: center;
   line-height: 1.4;
+  flex: 1;
+}
+
+.rede-cta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--terracota);
+  letter-spacing: 0.03em;
+  margin-top: 0.75rem;
 }
 
 /* ─── AGENDAMENTO ─── */

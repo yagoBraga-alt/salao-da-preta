@@ -1,6 +1,6 @@
 export default function Sobre() {
   return (
-    <section>
+    <section id="sobre">
       <div className="sobre fade-up">
         <p className="section-label text-center">Quem somos</p>
         <div className="ornament"></div>

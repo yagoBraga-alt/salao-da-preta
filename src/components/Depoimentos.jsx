@@ -1,6 +1,6 @@
 export default function Depoimentos() {
   return (
-    <section className="depoimentos">
+    <section className="depoimentos" id="depoimentos">
       <div className="depo-inner fade-up">
         <p className="section-label text-center">Clientes</p>
         <div className="ornament"></div>
