@@ -4,12 +4,12 @@ export default function Curso() {
       <div className="curso-inner fade-up">
         <p className="section-label">Formação</p>
         <h2 className="section-title">Meu <em>Curso</em><br />Da Preta Raízes</h2>
-        <p className="curso-desc">Aprenda com quem faz de verdade. Um curso pensado para quem quer se especializar no universo dos cabelos cacheados e crespos — seja para cuidar do próprio cabelo ou para trabalhar na área.</p>
+        <p className="curso-desc">Aprenda com quem faz de verdade. Um curso pensado para quem quer se especializar para atender pessoas com cabelos cacheados, crespos e ondulados, para cuidar do próprio cabelo ou para trabalhar na área expandindo sua carreira profissional.</p>
 
         <div className="curso-items">
           <div className="curso-item">
             <div className="curso-item-dot"></div>
-            <span>Técnicas de corte para cachos e crespos</span>
+            <span>Técnicas de corte para cabelos com curvatura</span>
           </div>
           <div className="curso-item">
             <div className="curso-item-dot"></div>
@@ -17,15 +17,11 @@ export default function Curso() {
           </div>
           <div className="curso-item">
             <div className="curso-item-dot"></div>
-            <span>Tratamentos e cronograma capilar</span>
+            <span>Introdução a tratamento capilar</span>
           </div>
           <div className="curso-item">
             <div className="curso-item-dot"></div>
-            <span>Coloração segura em cabelos curvos</span>
-          </div>
-          <div className="curso-item">
-            <div className="curso-item-dot"></div>
-            <span>Finalizações e penteados</span>
+            <span>Técnicas de finalização e secagem</span>
           </div>
           <div className="curso-item">
             <div className="curso-item-dot"></div>
@@ -33,7 +29,7 @@ export default function Curso() {
           </div>
         </div>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHNWIlM-SacEkffc0pPOS6SGWcepsu7C0VV4ArrUAPHnUERg/viewform" target="_blank" rel="noopener noreferrer" className="btn-primary">
+        <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="btn-primary">
           Quero saber mais sobre o curso →
         </a>
       </div>

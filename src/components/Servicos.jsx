@@ -1,11 +1,11 @@
-import { Scissors, Sparkles, Palette, GraduationCap } from 'lucide-react'
+import { Scissors, Sparkles, Palette, GraduationCap, Wand2 } from 'lucide-react'
 
 export default function Servicos() {
   return (
     <section className="servicos">
       <div className="servicos-inner fade-up">
         <p className="section-label">O que fazemos</p>
-        <h2 className="section-title">Serviços feitos<br />pra <em>realçar o que é seu</em></h2>
+        <h2 className="section-title">Serviços pensados<br />para <em>os seus fios</em></h2>
 
         <div className="servicos-grid">
           <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="servico-card">
@@ -13,14 +13,14 @@ export default function Servicos() {
               <Scissors size={32} strokeWidth={1.5} />
             </span>
             <h3>Corte</h3>
-            <p>Corte especializado para realçar o volume e a forma natural dos seus fios</p>
+            <p>Corte especializado para cabelos com curvatura, criando harmonia capilar e respeitando cada fator de encolhimento</p>
           </a>
           <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="servico-card">
             <span className="servico-icon">
               <Sparkles size={32} strokeWidth={1.5} />
             </span>
             <h3>Tratamento</h3>
-            <p>Hidratação profunda, reconstrução e nutrição para cachos saudáveis</p>
+            <p>Protocolos especializados para devolver saúde, brilho, definição e beleza ao seu cabelo</p>
           </a>
           <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="servico-card">
             <span className="servico-icon">
@@ -29,12 +29,19 @@ export default function Servicos() {
             <h3>Coloração</h3>
             <p>Cor com técnicas seguras para cabelos com curvatura, sem danificar</p>
           </a>
-          <a href="#curso" className="servico-card">
+          <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="servico-card">
+            <span className="servico-icon">
+              <Wand2 size={32} strokeWidth={1.5} />
+            </span>
+            <h3>Mechas</h3>
+            <p>Técnica de mechas, morena iluminada, loiro e coloridos sem usar pó descolorante, preservando a saúde do seu cabelo</p>
+          </a>
+          <a href="https://wa.me/558698352282" target="_blank" rel="noopener noreferrer" className="servico-card">
             <span className="servico-icon">
               <GraduationCap size={32} strokeWidth={1.5} />
             </span>
             <h3>Cursos</h3>
-            <p>Aprenda a cuidar ou trabalhar com cabelos crespos e cacheados</p>
+            <p>Se torne referência em cabelos cacheados, crespos e ondulados e transforme sua carreira. Aprenda a precificar seu trabalho e lucre sem dor de cabeça</p>
           </a>
         </div>
       </div>

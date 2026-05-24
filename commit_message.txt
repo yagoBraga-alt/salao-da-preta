@@ -1,0 +1,15 @@
+feat: ajustes de conteúdo e identidade visual conforme feedback da cliente
+
+- Todos os links redirecionados para WhatsApp (incluindo formulário do curso)
+- Fonte trocada para Inter (mais madura e menos arredondada)
+- Cores --espresso e --terracota levemente mais claras
+- Logo atualizada para logoPreta.png com círculo ampliado
+- Travessões removidos e linguagem revisada em todos os textos
+- Depoimentos substituídos por avaliações reais do Google
+- Cards de Serviços atualizados + novo card de Mechas
+- Hero: título em linha única + pills de Transição Capilar e Mechas
+- Seção Sobre: título e parágrafos atualizados
+- Reconhecimento: crédito ao edital Entra na Roda (Iza, Risqué, Preta Hub)
+- Curso: conteúdo dos cards e descrição atualizados
+- Grid de serviços ajustado para 3 colunas com último card centralizado
+- Cards de depoimentos e portfólio com altura uniforme nos rodapés

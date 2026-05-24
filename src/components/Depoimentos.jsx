@@ -9,18 +9,18 @@ export default function Depoimentos() {
         <div className="depo-grid">
           <div className="depo-card">
             <div className="depo-stars">★★★★★</div>
-            <blockquote>"Finalmente encontrei um lugar que entende o meu cabelo. Saí amando ainda mais meus cachos!"</blockquote>
-            <p className="depo-author">Cliente do Salão</p>
+            <blockquote>"Atendimento excelente, muito bom. Recepção por whatsapp muito boa. A Jô, uma pessoa super gente boa, conversa, tira qualquer dúvida, e faz o cabelo ficar do jeito que a pessoa quer. Simplesmente o melhor salão de cabelo cacheado de Parnaíba!!!!!"</blockquote>
+            <p className="depo-author">João Pedro dos Santos</p>
           </div>
           <div className="depo-card">
             <div className="depo-stars">★★★★★</div>
-            <blockquote>"A Preta sabe exatamente o que está fazendo. Meu cabelo nunca esteve tão saudável e definido."</blockquote>
-            <p className="depo-author">Cliente do Salão</p>
+            <blockquote>"Foi tudo perfeito, acolhedor e muito atencioso. Me tirou muitas dúvidas que eu tinha sobre meu tipo de cabelo e como finalizar ele, redescobri meu cabelinhooo ♡"</blockquote>
+            <p className="depo-author">Maria Eduarda</p>
           </div>
           <div className="depo-card">
             <div className="depo-stars">★★★★★</div>
-            <blockquote>"O corte mudou tudo. Ela respeita cada fio, cada volume. Recomendo de olhos fechados!"</blockquote>
-            <p className="depo-author">Cliente do Salão</p>
+            <blockquote>"Ter passado pelas mãos da Jô foi uma experiência maravilhosa. O cuidado, a atenção e o carinho em cada detalhe fazem toda a diferença. Me senti segura, acolhida e o resultado no meu cabelo ficou simplesmente lindo, todo mundo está elogiando!"</blockquote>
+            <p className="depo-author">Ana Raquel</p>
           </div>
         </div>
       </div>

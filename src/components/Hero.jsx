@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/logoPreta.png'
 
 export default function Hero() {
   return (
@@ -10,10 +10,7 @@ export default function Hero() {
 
         <p className="badge">Parnaíba · Piauí · Desde 2015</p>
 
-        <h1>
-          Salão<br />
-          <em>da Preta</em>
-        </h1>
+        <h1>Salão <em>da Preta</em></h1>
 
         <p className="hero-sub">1° Salão Especializado em Curvaturas de Parnaíba</p>
         <p className="hero-location">📍 Parnaíba, Piauí</p>
@@ -23,6 +20,8 @@ export default function Hero() {
           <span className="pill">✦ Crespos</span>
           <span className="pill">✦ Ondulados</span>
           <span className="pill">✦ Sem alisamentos</span>
+          <span className="pill">✦ Transição capilar</span>
+          <span className="pill">✦ Mechas sem pó descolorante</span>
         </div>
 
         <div className="hero-ctas">

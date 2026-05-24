@@ -18,7 +18,7 @@ export default function Portfolio() {
                  loading="lazy" />
             <div className="foto-legenda">
               <h3>✨ Cachos livres & definição</h3>
-              <p>Finalização com fitagem e ativação de cachos – respeito total à textura natural.</p>
+              <p>Finalização com fitagem e ativação de cachos, respeitando a textura natural de cada fio.</p>
             </div>
           </div>
 

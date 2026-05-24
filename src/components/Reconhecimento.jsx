@@ -10,8 +10,9 @@ export default function Reconhecimento() {
         <div className="premio-content">
           <p className="section-label">Reconhecimento</p>
           <h2 className="section-title">Vencedora na Categoria <em>Beleza</em></h2>
-          <p>Nosso compromisso com a excelência, o respeito à identidade e o cuidado especializado em curvaturas nos trouxe o reconhecimento como <strong>destaque na categoria Beleza</strong>.</p>
-          <p>Esse prêmio é dedicado a cada cliente que confia em nossas mãos e celebra a própria essência no Salão da Preta!</p>
+          <p style={{ fontSize: '0.85rem', color: 'var(--caramel)', letterSpacing: '0.04em', marginBottom: '1.25rem', marginTop: '-0.25rem' }}>Do edital Entra na Roda (Idealizado pela cantora Iza, Risqué, Preta Hub)</p>
+          <p>O cuidado especializado em curvaturas, o respeito a cada tipo de fio e o carinho no atendimento nos renderam reconhecimento como <strong>destaque na categoria Beleza</strong>.</p>
+          <p>Esse prêmio é resultado de uma trajetória bem construída tecnicamente e da confiança de cada cliente em nosso trabalho.</p>
         </div>
       </div>
     </section>
