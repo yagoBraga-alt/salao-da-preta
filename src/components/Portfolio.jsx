@@ -1,5 +1,6 @@
 import FotoCacho from '../assets/FotoCacho.png'
 import FotoCrespo from '../assets/FotoCrespo.png'
+import { Sparkles, Star } from 'lucide-react'
 
 export default function Portfolio() {
   return (
@@ -17,7 +18,7 @@ export default function Portfolio() {
                  alt="Penteado com cachos definidos - Salão da Preta"
                  loading="lazy" />
             <div className="foto-legenda">
-              <h3>✨ Cachos livres & definição</h3>
+              <h3><Sparkles size={16} style={{ display: 'inline', marginRight: '0.35rem', color: 'var(--caramel)', verticalAlign: 'middle' }} /> Cachos livres & definição</h3>
               <p>Finalização com fitagem e ativação de cachos, respeitando a textura natural de cada fio.</p>
             </div>
           </div>
@@ -29,12 +30,12 @@ export default function Portfolio() {
                  alt="Penteados crespos com volume - Salão da Preta"
                  loading="lazy" />
             <div className="foto-legenda">
-              <h3>🌟 Crespo empoderado</h3>
+              <h3><Star size={16} style={{ display: 'inline', marginRight: '0.35rem', color: 'var(--caramel)', verticalAlign: 'middle' }} /> Crespo empoderado</h3>
               <p>Modelagem que exibe volume, formato arredondado e movimento único para cabelos crespos.</p>
             </div>
           </div>
         </div>
-        <p className="text-center" style={{ marginTop: '2rem', fontSize: '0.85rem', color: '#8a6040' }}>✨ Toque nas imagens e inspire-se. Seu cabelo também merece esse cuidado.</p>
+        <p className="text-center" style={{ marginTop: '2rem', fontSize: '0.85rem', color: '#8a6040' }}><Sparkles size={14} style={{ display: 'inline', marginRight: '0.3rem', color: 'var(--caramel)', verticalAlign: 'middle' }} />Toque nas imagens e inspire-se. Seu cabelo também merece esse cuidado.</p>
       </div>
     </section>
   )
