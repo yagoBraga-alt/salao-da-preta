@@ -1,4 +1,4 @@
-import logo from '../assets/logoPreta.png'
+import logo from '../assets/logo.png'
 
 export default function Hero() {
   return (
