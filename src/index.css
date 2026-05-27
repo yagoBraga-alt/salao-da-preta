@@ -777,4 +777,116 @@ footer a { color: var(--caramel); text-decoration: none; }
   text-transform: uppercase;
 }
 
+/* ─── LOCALIZAÇÃO ─── */
+.localizacao { background: var(--cream); }
+
+.localizacao-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .localizacao-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.localizacao-info .section-title { margin-bottom: 1.75rem; }
+
+.loc-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--offwhite);
+  border: 1px solid var(--sand);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.loc-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--caramel);
+  flex-shrink: 0;
+}
+
+.loc-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 0.3rem;
+}
+
+.loc-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--espresso);
+}
+
+.loc-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--caramel);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.4rem;
+  transition: color 0.2s;
+}
+
+.loc-link:hover { color: var(--terracota); }
+
+.localizacao-map {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(61,31,14,0.13);
+  height: 420px;
+}
+
+.localizacao-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ─── WHATSAPP FAB ─── */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+}
 
