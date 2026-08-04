@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Reconhecimento from './components/Reconhecimento'
 import Servicos from './components/Servicos'
+import Embaixadora from './components/Embaixadora'
 import Curso from './components/Curso'
 import Depoimentos from './components/Depoimentos'
 import Portfolio from './components/Portfolio'
@@ -53,6 +54,7 @@ export default function App() {
       <Sobre />
       <Reconhecimento />
       <Servicos />
+      <Embaixadora />
       <Curso />
       <Depoimentos />
       <Portfolio />

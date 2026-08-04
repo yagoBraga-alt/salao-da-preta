@@ -22,6 +22,7 @@ export default function Hero() {
           <span className="pill">✦ Sem alisamentos</span>
           <span className="pill">✦ Transição capilar</span>
           <span className="pill">✦ Mechas sem pó descolorante</span>
+          <span className="pill">✦ Embaixadora Ápice</span>
         </div>
 
         <div className="hero-ctas">

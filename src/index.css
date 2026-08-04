@@ -8,6 +8,7 @@
   --espresso: #5A2910;
   --dark:     #1A0D05;
   --offwhite: #FBF6EE;
+  --apice:    #3A7A4C;
 }
 
 html { scroll-behavior: smooth; }
@@ -428,6 +429,138 @@ section { padding: 5rem 1.5rem; }
 .servico-wa:hover {
   background: var(--terracota);
   color: #fff;
+}
+
+/* ─── EMBAIXADORA ÁPICE ─── */
+.embaixadora { background: var(--offwhite); }
+
+.embaixadora-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .embaixadora-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+.emb-img {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(61,31,14,0.15);
+}
+
+.emb-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.emb-content {
+  flex: 1.2;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .emb-content { text-align: center; }
+}
+
+.emb-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a3820;
+  margin-bottom: 1.5rem;
+}
+
+.emb-selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--apice) !important;
+  background: rgba(58,122,76,0.08);
+  border: 1px solid rgba(58,122,76,0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.25rem !important;
+}
+
+.emb-cupom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--cream);
+  border: 1.5px dashed var(--caramel);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .emb-cupom {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.9rem;
+  }
+}
+
+.emb-cupom-label {
+  font-size: 0.68rem !important;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--caramel) !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.emb-cupom-code {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--espresso) !important;
+  margin-bottom: 0 !important;
+  user-select: all;
+}
+
+.emb-copiar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--terracota);
+  background: transparent;
+  border: 1.5px solid var(--terracota);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.emb-copiar:hover { background: var(--terracota); color: #fff; }
+
+.emb-aviso {
+  font-size: 0.75rem !important;
+  color: var(--apice) !important;
+  min-height: 1.25rem;
+  margin-bottom: 1rem !important;
 }
 
 /* ─── CURSO ─── */
