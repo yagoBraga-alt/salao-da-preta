@@ -18,7 +18,7 @@ export default function Localizacao() {
               <p className="loc-text">
                 Av. São Sebastião, 3080<br />
                 Nossa Sra. de Fátima<br />
-                Parnaíba – PI, 64202-300
+                Parnaíba - PI, 64202-300
               </p>
               <a
                 href="https://maps.google.com/?q=Av.+São+Sebastião,+3080,+Parnaíba,+PI"
