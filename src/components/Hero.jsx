@@ -1,4 +1,15 @@
+import { MapPin, Sparkle, ChevronDown } from 'lucide-react'
 import logo from '../assets/logo.png'
+
+const destaques = [
+  'Cachos',
+  'Crespos',
+  'Ondulados',
+  'Sem alisamentos',
+  'Transição capilar',
+  'Mechas sem pó descolorante',
+  'Embaixadora Ápice',
+]
 
 export default function Hero() {
   return (
@@ -13,16 +24,18 @@ export default function Hero() {
         <h1>Salão <em>da Preta</em></h1>
 
         <p className="hero-sub">1° Salão Especializado em Curvaturas de Parnaíba</p>
-        <p className="hero-location">📍 Parnaíba, Piauí</p>
+        <p className="hero-location">
+          <MapPin size={13} strokeWidth={2} aria-hidden="true" />
+          Parnaíba, Piauí
+        </p>
 
         <div className="hero-pills">
-          <span className="pill">✦ Cachos</span>
-          <span className="pill">✦ Crespos</span>
-          <span className="pill">✦ Ondulados</span>
-          <span className="pill">✦ Sem alisamentos</span>
-          <span className="pill">✦ Transição capilar</span>
-          <span className="pill">✦ Mechas sem pó descolorante</span>
-          <span className="pill">✦ Embaixadora Ápice</span>
+          {destaques.map(item => (
+            <span className="pill" key={item}>
+              <Sparkle size={12} strokeWidth={2} aria-hidden="true" />
+              {item}
+            </span>
+          ))}
         </div>
 
         <div className="hero-ctas">
@@ -32,9 +45,7 @@ export default function Hero() {
       </div>
 
       <div className="scroll-hint" aria-hidden="true">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M8 3v10M4 9l4 4 4-4" />
-        </svg>
+        <ChevronDown size={16} strokeWidth={1.5} />
         rolar
       </div>
     </section>

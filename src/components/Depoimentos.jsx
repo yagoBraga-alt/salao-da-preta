@@ -1,3 +1,15 @@
+import { Star } from 'lucide-react'
+
+function Estrelas() {
+  return (
+    <div className="depo-stars" role="img" aria-label="Avaliação 5 de 5 estrelas">
+      {Array.from({ length: 5 }, (_, i) => (
+        <Star key={i} size={15} fill="currentColor" strokeWidth={0} />
+      ))}
+    </div>
+  )
+}
+
 export default function Depoimentos() {
   return (
     <section className="depoimentos" id="depoimentos">
@@ -8,22 +20,22 @@ export default function Depoimentos() {
 
         <div className="depo-grid">
           <div className="depo-card">
-            <div className="depo-stars">★★★★★</div>
+            <Estrelas />
             <blockquote>"Atendimento excelente, muito bom. Recepção por WhatsApp muito boa. A Jô, uma pessoa super gente boa, conversa, tira qualquer dúvida, e faz o cabelo ficar do jeito que a pessoa quer. Simplesmente o melhor salão de cabelo cacheado de Parnaíba!!!!!"</blockquote>
             <p className="depo-author">João Pedro dos Santos</p>
           </div>
           <div className="depo-card">
-            <div className="depo-stars">★★★★★</div>
+            <Estrelas />
             <blockquote>"Foi tudo perfeito, acolhedor e muito atencioso. Me tirou muitas dúvidas que eu tinha sobre meu tipo de cabelo e como finalizar ele, redescobri meu cabelinhooo ♡"</blockquote>
             <p className="depo-author">Maria Eduarda</p>
           </div>
           <div className="depo-card">
-            <div className="depo-stars">★★★★★</div>
+            <Estrelas />
             <blockquote>"Minha experiência foi simplesmente incrível, há um ótimo atendimento, são muito simpáticas e entrega o que promete."</blockquote>
             <p className="depo-author">Lays</p>
           </div>
           <div className="depo-card">
-            <div className="depo-stars">★★★★★</div>
+            <Estrelas />
             <blockquote>"Ter passado pelas mãos da Jô foi uma experiência maravilhosa. O cuidado, a atenção e o carinho em cada detalhe fazem toda a diferença. Me senti segura, acolhida e o resultado no meu cabelo ficou simplesmente lindo!"</blockquote>
             <p className="depo-author">Ana Raquel</p>
           </div>

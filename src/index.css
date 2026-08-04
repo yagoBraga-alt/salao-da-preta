@@ -121,6 +121,9 @@ body {
 }
 
 .hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.8rem;
   color: rgba(232,217,192,0.6);
   letter-spacing: 0.12em;
@@ -137,6 +140,9 @@ body {
 }
 
 .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--cream);
@@ -892,7 +898,12 @@ footer a { color: var(--caramel); text-decoration: none; }
   border-radius: 12px;
 }
 
-.depo-stars { color: var(--caramel); margin-bottom: 0.75rem; font-size: 0.9rem; }
+.depo-stars {
+  display: flex;
+  gap: 0.15rem;
+  color: var(--caramel);
+  margin-bottom: 0.75rem;
+}
 
 .depo-card blockquote {
   font-size: 0.9rem;
