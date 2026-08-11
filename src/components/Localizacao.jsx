@@ -9,6 +9,28 @@ export default function Localizacao() {
           <p className="section-label">Endereço &amp; Horários</p>
           <h2 className="section-title">Localização &amp; <em>Horários</em></h2>
 
+          <div className="loc-card loc-card--destaque">
+            <div className="loc-icon-wrap">
+              <CalendarCheck size={20} strokeWidth={1.8} />
+            </div>
+            <div>
+              <p className="loc-label">Atenção</p>
+              <p className="loc-text">
+                Atendemos <strong>somente com agendamento</strong>. O salão abre
+                de acordo com os horários marcados do dia, então não funcionamos
+                em horário comercial. Combine o seu antes de vir.
+              </p>
+              <a
+                href="https://wa.me/558698352282?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="loc-link"
+              >
+                Agendar pelo WhatsApp →
+              </a>
+            </div>
+          </div>
+
           <div className="loc-card">
             <div className="loc-icon-wrap">
               <MapPin size={20} strokeWidth={1.8} />
@@ -38,16 +60,6 @@ export default function Localizacao() {
             <div>
               <p className="loc-label">Dias de atendimento</p>
               <p className="loc-text">Terça a Sábado</p>
-            </div>
-          </div>
-
-          <div className="loc-card">
-            <div className="loc-icon-wrap">
-              <CalendarCheck size={20} strokeWidth={1.8} />
-            </div>
-            <div>
-              <p className="loc-label">Formato</p>
-              <p className="loc-text">Somente por agendamento</p>
             </div>
           </div>
 

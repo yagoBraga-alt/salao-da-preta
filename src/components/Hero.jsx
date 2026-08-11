@@ -1,4 +1,4 @@
-import { MapPin, Sparkle, ChevronDown } from 'lucide-react'
+import { MapPin, Sparkle, ChevronDown, ChevronRight, CalendarCheck, BadgeCheck } from 'lucide-react'
 import logo from '../assets/logo.png'
 
 const destaques = [
@@ -8,12 +8,11 @@ const destaques = [
   'Sem alisamentos',
   'Transição capilar',
   'Mechas sem pó descolorante',
-  'Embaixadora Ápice',
 ]
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="topo">
       <div>
         <div className="hero-ring" aria-hidden="true">
           <img src={logo} alt="Salão da Preta Logo" />
@@ -28,6 +27,20 @@ export default function Hero() {
           <MapPin size={13} strokeWidth={2} aria-hidden="true" />
           Parnaíba, Piauí
         </p>
+
+        <div className="hero-chips">
+          <a href="#embaixadora" className="hero-parceria">
+            <BadgeCheck size={15} strokeWidth={2} aria-hidden="true" />
+            Embaixadora oficial <strong>Ápice</strong>
+            <ChevronRight size={14} strokeWidth={2.5} aria-hidden="true" />
+          </a>
+
+          <a href="#localizacao" className="hero-aviso">
+            <CalendarCheck size={13} strokeWidth={2} aria-hidden="true" />
+            Atendemos somente com agendamento prévio
+            <ChevronRight size={13} strokeWidth={2.5} aria-hidden="true" />
+          </a>
+        </div>
 
         <div className="hero-pills">
           {destaques.map(item => (

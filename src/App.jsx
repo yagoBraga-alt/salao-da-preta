@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Reconhecimento from './components/Reconhecimento'
@@ -42,6 +43,7 @@ export default function App() {
 
   return (
     <>
+      <Nav />
       <Hero />
       
       {/* ─── WAVE DIVIDER ─── */}
@@ -54,10 +56,10 @@ export default function App() {
       <Sobre />
       <Reconhecimento />
       <Servicos />
+      <Portfolio />
+      <Depoimentos />
       <Embaixadora />
       <Curso />
-      <Depoimentos />
-      <Portfolio />
       <Redes />
       <Localizacao />
       <Agendamento />

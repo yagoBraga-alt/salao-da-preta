@@ -3,21 +3,10 @@ import { BadgeCheck, Copy, Check } from 'lucide-react'
 
 const CUPOM = 'APSALAODAPRETA'
 const APICE_URL = 'https://www.apicecosmeticos.com.br/'
-const FOTO = '/embaixadora-apice.jpg'
 
 export default function Embaixadora() {
   const [copiado, setCopiado] = useState(false)
-  const [temFoto, setTemFoto] = useState(false)
   const timer = useRef(null)
-
-  // Só monta a coluna da foto se o arquivo existir, para não abrir
-  // um espaço vazio no layout enquanto a imagem falha.
-  useEffect(() => {
-    const teste = new Image()
-    teste.onload = () => setTemFoto(true)
-    teste.src = FOTO
-    return () => { teste.onload = null }
-  }, [])
 
   useEffect(() => () => clearTimeout(timer.current), [])
 
@@ -48,12 +37,6 @@ export default function Embaixadora() {
   return (
     <section className="embaixadora" id="embaixadora">
       <div className="embaixadora-inner fade-up">
-
-        {temFoto && (
-          <div className="emb-img">
-            <img src={FOTO} alt="Jô, embaixadora Ápice Cosméticos" />
-          </div>
-        )}
 
         <div className="emb-content">
           <p className="section-label">Parceria oficial</p>
