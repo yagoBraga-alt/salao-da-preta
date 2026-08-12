@@ -795,10 +795,21 @@ section { padding: 5rem 1.5rem; }
 }
 
 .curso-inner {
-  max-width: 800px;
+  max-width: 1040px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .curso-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 
 .curso .section-label { color: var(--caramel); }
@@ -928,6 +939,76 @@ section { padding: 5rem 1.5rem; }
 
 .carrossel-seta--esq { left: -6px; }
 .carrossel-seta--dir { right: -6px; }
+
+/* ─── SLIDESHOW (seção do curso) ─── */
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slideshow-palco {
+  position: relative;
+  width: clamp(230px, 62vw, 330px);
+  aspect-ratio: 9 / 16;
+  padding: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(196,147,90,0.3);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 18px 44px -14px rgba(0,0,0,0.6);
+  cursor: zoom-in;
+}
+
+/* As fotos ficam empilhadas no mesmo lugar; só muda a opacidade. */
+.slideshow-palco img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.slideshow-palco img.ativa { opacity: 1; }
+
+.slideshow-pontos {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.slideshow-ponto {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slideshow-ponto::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(245,239,227,0.35);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.slideshow-ponto:hover::before { background: rgba(245,239,227,0.6); }
+
+.slideshow-ponto.ativo::before {
+  background: var(--caramel);
+  transform: scale(1.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slideshow-palco img { transition: none; }
+}
 
 @media (max-width: 680px) {
   .carrossel-seta { display: none; }

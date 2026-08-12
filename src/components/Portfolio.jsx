@@ -1,4 +1,5 @@
 import Carrossel from './Carrossel'
+import { fotosPortfolio } from '../galerias'
 
 export default function Portfolio() {
   return (
@@ -8,7 +9,7 @@ export default function Portfolio() {
         <div className="ornament"></div>
         <h2 className="section-title text-center">Resultados que <em>encantam</em><br />e valorizam cada curvatura</h2>
 
-        <Carrossel />
+        <Carrossel fotos={fotosPortfolio} rotulo="Galeria de resultados" />
 
         <p className="text-center destaques-legenda">Arraste para o lado e veja mais resultados feitos aqui no salão.</p>
       </div>

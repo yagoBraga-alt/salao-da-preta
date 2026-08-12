@@ -1,54 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-
-const modulos = import.meta.glob('../assets/carrossel/*.webp', {
-  eager: true,
-  import: 'default',
-})
-
-const descricoes = {
-  'carrossel-01': 'Corte curto com cachos definidos, vista de perfil',
-  'carrossel-02': 'Cabelo longo cacheado loiro, vista de perfil',
-  'carrossel-03': 'Corte curto crespo com mechas caramelo',
-  'carrossel-04': 'Cabelo longo cacheado escuro, vista de costas',
-  'carrossel-05': 'Corte curto cacheado com mechas iluminadas',
-  'carrossel-06': 'Cabelo longo ondulado em tom caramelo',
-  'carrossel-07': 'Corte curto cacheado escuro, vista de costas',
-  'carrossel-08': 'Cabelo longo cacheado com mechas, vista de costas',
-  'carrossel-09': 'Corte curto crespo com volume, vista de costas',
-  'carrossel-10': 'Cabelo longo ondulado com mechas iluminadas',
-  'carrossel-11': 'Cabelo médio cacheado com mechas loiras',
-  'carrossel-12': 'Cabelo médio cacheado com mechas caramelo',
-  'carrossel-13': 'Cabelo médio cacheado com mechas, vista de costas',
-  'carrossel-14': 'Cabelo médio cacheado com mechas loiras',
-}
-
-// Todas saem da conversão com 720px de largura. A altura vai declarada no
-// <img> para o navegador reservar o espaço antes da imagem baixar, senão o
-// item colapsa e o carrossel nasce sem largura nenhuma.
-const LARGURA = 720
-const alturas = { 'carrossel-05': 960 }
-
-const fotos = Object.keys(modulos)
-  .sort()
-  .map(caminho => {
-    const nome = caminho.split('/').pop().replace('.webp', '')
-    return {
-      nome,
-      src: modulos[caminho],
-      alt: descricoes[nome] || 'Resultado de cabelo com curvatura feito no Salão da Preta',
-      largura: LARGURA,
-      altura: alturas[nome] || 1280,
-    }
-  })
-
-// A lista vai duplicada: quando a primeira cópia termina, o trilho volta ao
-// meio sem que se perceba, porque o conteúdo dali em diante é igual.
-const trilhoDuplicado = [...fotos, ...fotos]
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Lightbox from './Lightbox'
 
 const VELOCIDADE = 0.6 // px por quadro, algo em torno de 36px/s
 
-export default function Carrossel() {
+export default function Carrossel({ fotos, rotulo = 'Galeria de fotos' }) {
+  // A lista vai duplicada: quando a primeira cópia termina, o trilho volta ao
+  // início sem que se perceba, porque o conteúdo dali em diante é igual.
+  const trilhoDuplicado = [...fotos, ...fotos]
+
   const trilho = useRef(null)
   const posicao = useRef(0)
   const [pausado, setPausado] = useState(false)
@@ -93,7 +53,7 @@ export default function Carrossel() {
     }
     quadro = requestAnimationFrame(andar)
     return () => cancelAnimationFrame(quadro)
-  }, [parado, remedida])
+  }, [parado, remedida, fotos.length])
 
   const mover = useCallback(direcao => {
     const el = trilho.current
@@ -103,22 +63,9 @@ export default function Carrossel() {
 
   const navegar = useCallback(passo => {
     setAberta(i => (i === null ? null : (i + passo + fotos.length) % fotos.length))
-  }, [])
+  }, [fotos.length])
 
-  useEffect(() => {
-    if (aberta === null) return
-    const aoTeclar = e => {
-      if (e.key === 'Escape') setAberta(null)
-      if (e.key === 'ArrowRight') navegar(1)
-      if (e.key === 'ArrowLeft') navegar(-1)
-    }
-    document.body.style.overflow = 'hidden'
-    window.addEventListener('keydown', aoTeclar)
-    return () => {
-      document.body.style.overflow = ''
-      window.removeEventListener('keydown', aoTeclar)
-    }
-  }, [aberta, navegar])
+  const fechar = useCallback(() => setAberta(null), [])
 
   return (
     <>
@@ -141,7 +88,7 @@ export default function Carrossel() {
           <ChevronLeft size={22} strokeWidth={2} />
         </button>
 
-        <div className="carrossel" ref={trilho}>
+        <div className="carrossel" ref={trilho} role="group" aria-label={rotulo}>
           {trilhoDuplicado.map((foto, i) => {
             const indice = i % fotos.length
             const copia = i >= fotos.length
@@ -178,50 +125,12 @@ export default function Carrossel() {
       </div>
 
       {aberta !== null && (
-        <div
-          className="lightbox"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Foto ampliada"
-          onClick={() => setAberta(null)}
-        >
-          <button
-            type="button"
-            className="lightbox-fechar"
-            onClick={() => setAberta(null)}
-            aria-label="Fechar"
-            autoFocus
-          >
-            <X size={24} strokeWidth={2} />
-          </button>
-
-          <button
-            type="button"
-            className="lightbox-seta lightbox-seta--esq"
-            onClick={e => { e.stopPropagation(); navegar(-1) }}
-            aria-label="Foto anterior"
-          >
-            <ChevronLeft size={26} strokeWidth={2} />
-          </button>
-
-          <img
-            className="lightbox-foto"
-            src={fotos[aberta].src}
-            alt={fotos[aberta].alt}
-            onClick={e => e.stopPropagation()}
-          />
-
-          <button
-            type="button"
-            className="lightbox-seta lightbox-seta--dir"
-            onClick={e => { e.stopPropagation(); navegar(1) }}
-            aria-label="Próxima foto"
-          >
-            <ChevronRight size={26} strokeWidth={2} />
-          </button>
-
-          <p className="lightbox-contador">{aberta + 1} de {fotos.length}</p>
-        </div>
+        <Lightbox
+          fotos={fotos}
+          indice={aberta}
+          aoFechar={fechar}
+          aoNavegar={navegar}
+        />
       )}
     </>
   )
