@@ -47,7 +47,7 @@ export default function Embaixadora() {
             Ápice Cosméticos
           </p>
 
-          <p>Os produtos que usamos no salão são os mesmos que você pode levar para casa. A Ápice é especializada em cabelos cacheados, crespos e ondulados, e a Jô é embaixadora oficial da marca.</p>
+          <p>Para entregar o melhor resultado para cabelos com curvatura, escolhemos sempre produtos veganos, com ativos de qualidade, liberados para todo o público, inclusive crianças. No Salão da Preta utilizamos, recomendamos e revendemos Ápice. E com meu cupom de Embaixadora da marca, você ganha desconto e pode comprar de qualquer lugar.</p>
 
           <div className="emb-cupom">
             <div>

@@ -1,4 +1,4 @@
-import { MapPin, Clock, CalendarCheck } from 'lucide-react'
+import { MapPin, CalendarCheck } from 'lucide-react'
 
 export default function Localizacao() {
   return (
@@ -16,9 +16,9 @@ export default function Localizacao() {
             <div>
               <p className="loc-label">Atenção</p>
               <p className="loc-text">
-                Atendemos <strong>somente com agendamento</strong>. O salão abre
-                de acordo com os horários marcados do dia, então não funcionamos
-                em horário comercial. Combine o seu antes de vir.
+                Nosso funcionamento é de terça a sábado,{' '}
+                <strong>somente por agendamento</strong>. Verifique a
+                disponibilidade de horários e garanta seu momento de cuidado.
               </p>
               <a
                 href="https://wa.me/558698352282?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
@@ -50,16 +50,6 @@ export default function Localizacao() {
               >
                 Ver no Google Maps →
               </a>
-            </div>
-          </div>
-
-          <div className="loc-card">
-            <div className="loc-icon-wrap">
-              <Clock size={20} strokeWidth={1.8} />
-            </div>
-            <div>
-              <p className="loc-label">Dias de atendimento</p>
-              <p className="loc-text">Terça a Sábado</p>
             </div>
           </div>
 

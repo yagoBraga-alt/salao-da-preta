@@ -5,13 +5,13 @@ export default function Sobre() {
         <p className="section-label text-center">Quem somos</p>
         <div className="ornament"></div>
         <h2 className="section-title text-center">Cuidado especializado que respeita<br />sua <em>história capilar</em></h2>
-        <p>Somos o primeiro salão especializado em curvaturas de Parnaíba. Aqui, cada cacho, cada ondulado e cada cabelo crespo é tratado com técnica, carinho e respeito pela sua identidade.</p>
+        <p>Somos o primeiro salão especializado em curvaturas de Parnaíba, de portas abertas desde 2015. Aqui, cada cacho, cada ondulado e cada cabelo crespo é tratado com técnica, carinho e respeito pela sua identidade.</p>
         <p>Sem alisamentos. Sem químicas que apagam quem você é. Cuidado sem traumas!</p>
 
         <div className="sobre-stats">
           <div className="stat">
-            <span className="stat-num">+10</span>
-            <span className="stat-desc">anos de experiência</span>
+            <span className="stat-num">+15</span>
+            <span className="stat-desc">anos de experiência da Jô</span>
           </div>
           <div className="stat">
             <span className="stat-num">19k</span>

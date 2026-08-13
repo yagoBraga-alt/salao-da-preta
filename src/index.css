@@ -503,8 +503,11 @@ section { padding: 5rem 1.5rem; }
   background: var(--cream);
   border: 1px solid var(--sand);
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem;
   min-width: 130px;
+  /* segura o rótulo mais longo em duas linhas: assim os quatro cards
+     cabem numa fila só no desktop e em duas de dois no celular */
+  max-width: 150px;
   text-align: center;
 }
 

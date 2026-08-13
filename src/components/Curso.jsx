@@ -8,7 +8,7 @@ export default function Curso() {
         <div className="curso-texto">
           <p className="section-label">Formação</p>
           <h2 className="section-title">Meu <em>Curso</em><br />Da Preta Raízes</h2>
-          <p className="curso-desc">Aprenda com quem faz de verdade. Um curso pensado para quem quer se especializar para atender pessoas com cabelos cacheados, crespos e ondulados, para cuidar do próprio cabelo ou para trabalhar na área expandindo sua carreira profissional.</p>
+          <p className="curso-desc">Especialista em cabelos com curvatura há 15 anos. Aprenda com quem faz de verdade. Um curso pensado em 2 modalidades: 1) para quem quer se especializar para atender pessoas com cabelos cacheados, crespos e ondulados expandindo sua carreira profissional, 2) para cuidar do próprio cabelo com conhecimento e confiança.</p>
 
           <div className="curso-items">
             <div className="curso-item">
