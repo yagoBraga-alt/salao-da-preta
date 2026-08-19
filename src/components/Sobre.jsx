@@ -14,11 +14,11 @@ export default function Sobre() {
             <span className="stat-desc">anos de experiência da Jô</span>
           </div>
           <div className="stat">
-            <span className="stat-num">19k</span>
+            <span className="stat-num">+20k</span>
             <span className="stat-desc">seguidores</span>
           </div>
           <div className="stat">
-            <span className="stat-num">2.5k</span>
+            <span className="stat-num">+2,5k</span>
             <span className="stat-desc">publicações</span>
           </div>
           <div className="stat">
